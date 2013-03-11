@@ -1,0 +1,10 @@
+The fibonacci algorithms is written in five different ways.
+We are demonstrating that the non-recursive algorithm is far speedier 
+than any of the recursive algorithms.
+
+The fibonaci algorithms algorithms are unit tested for logical
+integrity i.e. correct results are delivered and a performance test 
+on these algorithms is performed.
+
+ The Rspec BDD (Behavior Driven Developement) duplicaters
+

@@ -1,0 +1,20 @@
+Viethni-Phuvans-MacBook-Pro:active_record vphuvan$ irb
+>> require 'json'
+=> true
+>> family = '{ "family": { "parents": { "mother": "a", "father":"b" },"children": { "first": "c", "second": "d", "third": "e" }}}'
+=> "{ \"family\": { \"parents\": { \"mother\": \"a\", \"father\":\"b\" },\"children\": { \"first\": \"c\", \"second\": \"d\", \"third\": \"e\" }}}"
+>> JSON.parse(family)
+=> {"family"=>{"parents"=>{"father"=>"b", "mother"=>"a"}, "children"=>{"first"=>"c", "third"=>"e", "second"=>"d"}}}
+>> JSON.parse(family)['parents']
+=> nil
+>> JSON.parse(family)['family']                                              => {"parents"=>{"father"=>"b", "mother"=>"a"}, "children"=>{"first"=>"c", "third"=>"e", "second"=>"d"}}
+>> JSON.parse(family)['family']['parents']
+=> {"father"=>"b", "mother"=>"a"}
+>> JSON.parse(family)['family']['parents']['mother']
+=> "a"
+>> JSON.parse(family)['family']['children']
+=> {"first"=>"c", "third"=>"e", "second"=>"d"}
+>> JSON.parse(family)['family']['children']['third']
+=> "e"
+>> 
+

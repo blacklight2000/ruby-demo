@@ -1,0 +1,13 @@
+This program is an example on how to design a Proc.new block
+so that it is reusable in different methods - I am a big fan of DRY.
+
+A unit test is included to ensure the integrity of the programming logic.
+
+An Rspec test is used for the same testing purpose
+
+I'd say that it makes sense and it's worth it to write Proc.new in a DRY 
+fashion if Proc.new stands for a complex block, which is used in one more 
+than one place in the program. If the block is simple, I am not so sure.
+
+This demo increments every element of an arbitrary array by an arbitrary number
+

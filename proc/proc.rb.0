@@ -1,0 +1,12 @@
+class A
+  @sum = Proc.new { |c,i| c + i }
+  @a = [1,2,3,4]
+  def self.proc_test(c)
+    ars = []
+    @a.each { |ai| ars << @sum.call(c,ai)}
+    puts ars[0]
+    puts ars[3]
+    puts ars.last
+  end
+end
+

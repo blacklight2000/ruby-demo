@@ -1,0 +1,11 @@
+The script is designed to capture someone's name in any way the peron
+writes:
+
+- first name only
+- first name, last name
+- firat name, middle initial, last name
+- first name, middle name, last name
+
+
+The unit test validates the program
+

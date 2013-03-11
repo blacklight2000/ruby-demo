@@ -1,0 +1,47 @@
+new-host-3:irc vphuvan$ irb
+>> class WordCount
+>>   def self.count(string)
+>>     string.split(" ").count
+>>   end
+>> end
+=> nil
+
+>> WordCount.count("hello there")
+=> 2
+
+>> require 'rspec'
+=> true
+
+>> describe WordCount do
+?>   context "count'em words" do
+?>     it "can count three words" do
+?>       WordCount.count("one two three").should==3
+>>     end
+>>   end
+>> end
+=> RSpec::Core::ExampleGroup::Nested_3   [<--3 is success]
+
+>> describe WordCount do
+?>   context "count'em words" do
+?>       WordCount.count("one two three").should==4
+>>     end
+>>   end
+RSpec::Expectations::ExpectationNotMetError: expected: 4 [<-- blows up in face]
+     got: 3 (using ==)
+	from /Library/Ruby/Gems/1.8/gems/rspec-expectations-2.12.0/lib/rspec/expectations/fail_with.rb:33:in `fail_with'
+	from /Library/Ruby/Gems/1.8/gems/rspec-expectations-2.12.0/lib/rspec/matchers/operator_matcher.rb:47:in `fail_with_message'
+	from /Library/Ruby/Gems/1.8/gems/rspec-expectations-2.12.0/lib/rspec/matchers/operator_matcher.rb:69:in `__delegate_operator'
+	from /Library/Ruby/Gems/1.8/gems/rspec-expectations-2.12.0/lib/rspec/matchers/operator_matcher.rb:59:in `eval_match'
+	from /Library/Ruby/Gems/1.8/gems/rspec-expectations-2.12.0/lib/rspec/matchers/operator_matcher.rb:28:in `=='
+	from (irb):37
+	from /Library/Ruby/Gems/1.8/gems/rspec-core-2.12.0/lib/rspec/core/example_group.rb:244:in `module_eval'
+	from /Library/Ruby/Gems/1.8/gems/rspec-core-2.12.0/lib/rspec/core/example_group.rb:244:in `subclass'
+	from /Library/Ruby/Gems/1.8/gems/rspec-core-2.12.0/lib/rspec/core/example_group.rb:230:in `context'
+	from (irb):36
+	from /Library/Ruby/Gems/1.8/gems/rspec-core-2.12.0/lib/rspec/core/example_group.rb:244:in `module_eval'
+	from /Library/Ruby/Gems/1.8/gems/rspec-core-2.12.0/lib/rspec/core/example_group.rb:244:in `subclass'
+	from /Library/Ruby/Gems/1.8/gems/rspec-core-2.12.0/lib/rspec/core/example_group.rb:230:in `describe'
+	from /Library/Ruby/Gems/1.8/gems/rspec-core-2.12.0/lib/rspec/core/dsl.rb:18:in `describe'
+	from (irb):35
+>>   end
+

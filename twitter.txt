@@ -1,0 +1,8 @@
+search API
+
+geo: default = null, returned whether or not 'geocode' parameter is supplied
+location: XXX (returned only if 'geocode' parameter is specified in the query)
+
+
+or geo: XXX, { coordinates:
+   geo returned, whether 'geocode' parameter is specified in the query
